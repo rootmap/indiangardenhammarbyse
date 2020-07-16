@@ -1,0 +1,234 @@
+a:hover,
+.date-times .date-upcoming{
+  color           : #a87f41;
+}
+
+h1,
+.services h1,
+.testimonial-wrapper h1{
+color           : #a87f41;
+}
+
+ul.nav.navbar-nav li:last-child:hover{
+    border-bottom: 0 solid transparent;
+    }
+.tr-slider-btn,
+.services .nav-tabs li.active a,
+.gallery-trigger ul li a,
+.services .nav-tabs li a:hover{
+	background-color : #a87f41;
+}
+.gallery-trigger ul li a.active, .gallery-trigger ul li a:hover{
+  background-color : #cb984b;
+}
+.tr-slider-btn:hover{
+	color           : #a87f41 !important;
+}
+
+.fa-ul.list-inline.top-info.level-one li a {
+    border: 1px solid #d9a967; 
+    background-color:  #d9a967;
+}
+
+.fa-ul.list-inline.top-info.level-one li a:hover {
+    background-color: #e8b876;
+}
+.fa-ul.list-inline.top-info.level-one li a.tel-no:hover{
+	background-color: transparent;
+}
+.tp-bullets.preview4 .bullet:hover, .tp-bullets.preview4 .bullet.selected,
+.book-now-wrapper .toggle,
+.btn,
+.galleri-wrapper .gallary-image .fa,
+.footer-bottom .fa-angle-up,
+.leave-comments .btn-read-more {
+    background-color: #a87f41 !important;
+  }
+.header-top{
+  background-color: #c79c60 !important;
+}
+.btn:hover,
+.leave-comments .btn-read-more:hover{
+    background-color: #c19a5f !important;
+  }
+.flags-align li:hover{
+  background-color:rgba(185,140,73,0.3);
+}
+
+.fa-ul.list-inline.top-info.level-one li a.tel-no:hover{
+	color: #feedd2;
+}
+.top-social.level-one li.location:hover,
+.start span{
+	color: #a87f41;
+}
+.flag-area .dropdown:before,
+.event-media .media-body h3 a,
+.dropdown dt a span,
+.dropdown a, .dropdown a:visited,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover
+.navbar-default .navbar-nav > .active > a:focus .navbar-default .navbar-nav > .active > a.open,
+ ul.nav.navbar-nav li a:hover,
+ ul.nav.navbar-nav li a:focus,
+ ul.level-one.dropdown-menu.single-dropdown li a:hover,
+ .time p, .read-more a, .blue-night, .take-look-wrapper h1,
+ .food-menu-wrapper .media .media-body h2 span,
+ .book-table-wrapper .booking-form h1,
+ .signature-wrapper .price span,
+ .owl-wrap .owl-controls i:hover::before,
+ .open-time strong,
+ .open-time i,
+ .address strong,
+ .address i,
+ footer .footer-top ul li a i:hover:before,
+ .footer-bottom p a:hover,
+ .flags-align li:hover,
+ .popup-wrapper p a:hover{
+ color           : #a87f41;
+}
+
+ul.nav.navbar-nav li.active,
+ul.nav.navbar-nav li:hover{
+    border-bottom: 2px solid #a87f41;
+
+}
+.food-menu-wrapper h2.item-name {
+    border-bottom: 1px solid #a87f41;
+}
+.twitter-avatar,
+.twt-area .date {
+    color: #a87f41; 
+}
+.time.text-center p,
+.date-times p:before{
+	color: #a87f41;
+}
+.welcome-note.text-center { 
+    border-bottom: 3px solid #a87f41;
+    border-top: 3px solid #a87f41;
+}
+
+.dropdown-menu .mega-content ul li:hover {
+    border-bottom: 0 solid transparent;
+}
+.menu-carousel li.mega-carousel-more a{
+	color: #a87f41 !important;
+}
+.dropdown-menu { 
+    border-bottom: 3px solid #a87f41 !important;
+}
+
+.team-wrapper .contents span,
+.about-banner h1,
+.story-wrapper h2,
+.story-wrapper .contents span,
+.story-wrapper .owner-info,
+.about-brief-wrapper .contents h2,
+.our-team-section h2{
+	color: #a87f41;
+}
+
+.team-wrapper .social { 
+    background: #c69e59;
+}
+
+.team-wrapper .social li a {
+    color: #a68142;
+}
+.team-wrapper .social::before{
+  border-bottom: 15px solid #c69e59;
+}
+.team-wrapper .contents{
+	    border-bottom: 2px solid #a87f41;
+}
+
+
+.menu-block .media .media-body h2 span,
+.reservation-bottom-section a{
+   color: #a87f41;
+}
+ 
+
+.event-heading address strong,
+.event-wrapper address strong{
+	color: #a87f41;
+}
+.reservation-top-section .carousel-indicators .active{
+  background: #a87f41;
+  border: 1px solid #a87f41; 
+}
+.date-image .date-text {
+    background-color: #a87f41;
+}
+.event-heading .btn.btn-imfo.btn-read-more:hover {
+    background: #831b44;
+  }
+.event-heading .btn.btn-imfo.btn-read-more,
+.event-wrapper .btn.btn-imfo.btn-read-more{
+	border-bottom: 2px solid #7f510c;
+	background-color: #a87f41;
+}
+.book-now-wrapper .btn,
+.event-heading .btn.btn-imfo.btn-read-more:hover{
+	background-color: #480048;
+}
+.offcanvas-menu .close:hover,
+.book-now-wrapper .btn{
+	background-color: #a87f41;
+}
+.book-now-wrapper .btn:hover,
+.date-image .date-icon {
+   background-color: rgba(168, 127, 65, 0.8);
+}
+.popup-wrapper input,
+.contact-wrapper .form-wrapper .form-control,
+#custom-search-input .input-group,
+.leave-comments .form-control {
+    border: 1px solid #a87f41;
+}
+
+.event-media .media-body h3,
+.event-media .date-of-event,
+.btn.btn-danger.btn-search span:before{
+	color: #a87f41;
+}
+.event-media { 
+    border-bottom: 2px solid #a87f41;
+}
+
+.preset-wrapper .holder .heading,
+.preset-wrapper .icon-holder{
+	background-color: #a87f41;
+}
+.clock-time:before {
+	color: #a87f41;
+}
+.dropdown dd ul{
+  border:1px solid #a87f41;
+}
+.book-table-wrapper .booking-form .form-control{
+  box-shadow: 0 1px 1px #a87f41;
+}
+.search-wrapper .search-container .search-contents input{
+  border-bottom: 1px solid rgba(193, 154, 95, 0.45)
+}
+.book-now-wrapper .book-now.open{
+   border-right: 2px solid #a87f41;
+}
+.testimonial-wrapper .carousel-indicators .active{
+  background: #a87f41 none repeat scroll 0 0;
+  border: 1px solid #a87f41;
+}
+.carousel-fade .carousel-indicators li{
+ border: 1px solid #a87f41; 
+}
+/*Mobile */
+@media only screen and (max-width : 767px) {
+
+button.navbar-toggle{
+  background-color: #a87f41;
+}
+
+
+}
