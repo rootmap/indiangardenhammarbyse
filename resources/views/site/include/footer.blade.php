@@ -54,10 +54,10 @@
            <p><i class="fa fa-envelope"></i> <strong>email :</strong><a href="mailto:{{ $social->email_address }}"> {{ $social->email_address }}</a></p>
          </div>
          <ul class="list-inline footer-social-list">
-          <li><a href="{{ $social->twitter }}"><i class="flaticon-twitter1"></i></a></li>
-          <li><a href="{{ $social->facebook }}"><i class="flaticon-facebook55"></i></a></li>
-          <li><a href="{{ $social->linkin }}"><i class="flaticon-linkedin11"></i></a></li>
-          <li><a href="{{ $social->pinterest }}"><i class="flaticon-pinterest34"></i></a></li>
+          <li><a  target="_blank" href="{{ $social->twitter }}"><i class="flaticon-twitter1"></i></a></li>
+          <li><a  target="_blank" href="{{ $social->facebook }}"><i class="flaticon-facebook55"></i></a></li>
+          <li><a  target="_blank" href="{{ $social->linkin }}"><i class="flaticon-linkedin11"></i></a></li>
+          <li><a  target="_blank" href="{{ $social->pinterest }}"><i class="flaticon-pinterest34"></i></a></li>
         </ul>
       </div>
 

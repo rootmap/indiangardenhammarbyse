@@ -58,7 +58,7 @@
                 
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                  <table id="example2" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th class="text-center">ID</th>
@@ -68,7 +68,6 @@
                             <th class="text-center">Price</th>
                             <th class="text-center">Created At</th>
                             <th class="text-center">Actions</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -83,6 +82,10 @@
                                     <td>{{formatDate($row->created_at)}}</td>
                                     <td>
                                         <div class="btn-group">
+                                            <a href="{{url('menuitem/duplicate/'.$row->id)}}" type="button" class="btn btn-default">
+                                                Duplicate 
+                                                <i class="fas fa-clone"></i>
+                                            </a>
                                             <a href="{{url('menuitem/edit/'.$row->id)}}" type="button" class="btn btn-default">
                                                 Edit 
                                                 <i class="fas fa-edit"></i>

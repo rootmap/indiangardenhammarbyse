@@ -62,7 +62,6 @@ class SubCategoryController extends Controller
                 
                 'category_id'=>'required',
                 'name'=>'required',
-                'description'=>'required',
                 'module_status'=>'required',
         ]);
 
@@ -286,7 +285,6 @@ class SubCategoryController extends Controller
                 
                 'category_id'=>'required',
                 'name'=>'required',
-                'description'=>'required',
                 'module_status'=>'required',
         ]);
 

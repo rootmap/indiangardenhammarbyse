@@ -24,6 +24,7 @@ Route::get("index","IndexController@index");
 Route::get("home","IndexController@index");
 Route::get("our-story","IndexController@ourHistory");
 Route::get("menu","IndexController@menu");
+Route::get("menu/{menu_name}","IndexController@menu");
 Route::get("events","IndexController@event");
 Route::get("gallery","IndexController@gallery");
 Route::get("reservation","IndexController@reservation");
@@ -219,6 +220,7 @@ Route::group(['middleware' =>'App\Http\Middleware\AdminMiddleware'], function(){
 		Route::get('/menuitem/list','MenuitemController@show');
 		Route::get('/menuitem/create','MenuitemController@create');
 		Route::get('/menuitem/edit/{id}','MenuitemController@edit');
+		Route::get('/menuitem/duplicate/{id}','MenuitemController@duplicate');
 		Route::get('/menuitem/delete/{id}','MenuitemController@destroy');
 		Route::get('/menuitem','MenuitemController@index');
 		Route::get('/menuitem/export/excel','MenuitemController@ExportExcel');
@@ -418,22 +420,25 @@ Route::group(['middleware' =>'App\Http\Middleware\AdminMiddleware'], function(){
 		Route::post('/gallerycategory/datatable/ajax','GallerycategoryController@datatable');
 		Route::post('/gallerycategory/update/{id}','GallerycategoryController@update');
 		//======================== Gallerycategory Route End ===============================//
+
+		//======================== Subcategory Route Start ===============================//
+		Route::get('/subcategory/list','SubcategoryController@show');
+		Route::get('/subcategory/create','SubcategoryController@create');
+		Route::get('/subcategory/edit/{id}','SubcategoryController@edit');
+		Route::get('/subcategory/delete/{id}','SubcategoryController@destroy');
+		Route::get('/subcategory','SubcategoryController@index');
+		Route::get('/subcategory/export/excel','SubcategoryController@ExportExcel');
+		Route::get('/subcategory/export/pdf','SubcategoryController@ExportPDF');
+		Route::post('/subcategory','SubcategoryController@store');
+		Route::post('/subcategory/ajax','SubcategoryController@ajaxSave');
+		Route::post('/subcategory/datatable/ajax','SubcategoryController@datatable');
+		Route::post('/subcategory/update/{id}','SubcategoryController@update');
+		//======================== Subcategory Route End ===============================//
 	});
+
+	
+
 
 });
 
 
-
-//======================== Subcategory Route Start ===============================//
-Route::get('/subcategory/list','SubcategoryController@show');
-Route::get('/subcategory/create','SubcategoryController@create');
-Route::get('/subcategory/edit/{id}','SubcategoryController@edit');
-Route::get('/subcategory/delete/{id}','SubcategoryController@destroy');
-Route::get('/subcategory','SubcategoryController@index');
-Route::get('/subcategory/export/excel','SubcategoryController@ExportExcel');
-Route::get('/subcategory/export/pdf','SubcategoryController@ExportPDF');
-Route::post('/subcategory','SubcategoryController@store');
-Route::post('/subcategory/ajax','SubcategoryController@ajaxSave');
-Route::post('/subcategory/datatable/ajax','SubcategoryController@datatable');
-Route::post('/subcategory/update/{id}','SubcategoryController@update');
-//======================== Subcategory Route End ===============================//

@@ -26,6 +26,7 @@ use App\WebsiteSettings;
 use App\Reservation;
 use App\Blogs;
 use App\Customer;
+use App\SubCategory;
 use App\GalleryCategory;
 class IndexController extends Controller
 {
@@ -44,17 +45,17 @@ class IndexController extends Controller
     private function categoryParseData()
     {
         $data=[];
-        $pureCatCheck=Category::count();
+        $pureCatCheck=SubCategory::count();
 
         if($pureCatCheck > 0 )
         {
-            $pureCat=Category::where('category_status','=','Active')->get();
+            $pureCat=SubCategory::where('module_status','=','Active')->get();
             foreach($pureCat as $pc){
-                $sCatCheck=MenuItem::where('category',$pc->id)->count();
+                $sCatCheck=MenuItem::where('sub_category_id',$pc->id)->count();
                 $subCatData=[];
                 if($sCatCheck > 0)
                 {
-                    $sCat=MenuItem::where('category',$pc->id)->get();
+                    $sCat=MenuItem::where('sub_category_id',$pc->id)->get();
                     foreach($sCat as $sc)
                     {
                         $subCatData[]=[
@@ -70,6 +71,7 @@ class IndexController extends Controller
                 }
                 $data[]=[
                         'id'=>$pc->id,
+                        'cid'=>$pc->category_id,
                         'name'=>$pc->name,
                         'description'=>$pc->description,
                         'scat'=>$subCatData
@@ -124,15 +126,19 @@ class IndexController extends Controller
         $MenuPageInfo   = MenuPageInfo::where('module_status','=','Active')->get();
         $MenuItem       = $this->categoryParseData();
         $category        = Category::where('category_status','Active')->get();
-        
+        $SubCategory        = SubCategory::where('module_status','Active')->get();
+        $nMenu=MenuItem::select('id','name','description','price','category','sub_category_id')->get();
         //dd($MenuItem);
     	return view('site.pages.menu',[
             'OpeningHour'=>$OpeningHour,
             'MenuPageInfo'=>$MenuPageInfo,
             'MenuItem'=>$MenuItem,
             'category'=>$category,
+            'SubCategory'=>$SubCategory,
+            'nMenu'=>$nMenu,
         ]);
     }
+
     public function event(){
         $setting        = Sitesettings::all();
         $OpeningHour    = OpeningHour::all();

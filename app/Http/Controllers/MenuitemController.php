@@ -22,7 +22,7 @@ class MenuItemController extends Controller
     public function __construct(){ $this->sdc = new CoreCustomController(); }
     
     public function index(){
-        $tab=MenuItem::all();
+        $tab=MenuItem::orderBy('id','DESC')->get();
         return view('admin.pages.menuitem.menuitem_list',['dataRow'=>$tab]);
     }
 
@@ -311,6 +311,26 @@ class MenuItemController extends Controller
         return view('admin.pages.menuitem.menuitem_edit',['dataRow_Category'=>$tab_Category,'dataRow'=>$tab,'edit'=>true,'SubCategory'=>$tab_SubCategory]);  
     }
 
+    public function duplicate(MenuItem $menuitem,$id=0)
+    {
+        $tabs=MenuItem::find($id); 
+
+        $tab=new MenuItem();
+        $tab->category_name=$tabs->category_name;
+        $tab->category=$tabs->category;
+        $tab->sub_category_name=$tabs->sub_category_name;
+        $tab->sub_category_id=$tabs->sub_category_id;
+        $tab->name=$tabs->name;
+        $tab->description=$tabs->description;
+        $tab->price=$tabs->price;
+        $tab->menu_item_image=$tabs->menu_item_image;
+        $tab->special=$tabs->special;
+        $tab->spicy=$tabs->spicy;
+        $tab->save();
+
+        return redirect(url('menuitem/edit/'.$tab->id))->with('status','Menu Item Cloned Successfully');
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -325,7 +345,6 @@ class MenuItemController extends Controller
                 'category'=>'required',
                 'sub_category'=>'required',
                 'name'=>'required',
-                'description'=>'required',
                 'price'=>'required',
         ]);
 
